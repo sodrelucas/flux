@@ -29,8 +29,16 @@ export default function Login({ onHandleForm }: LoginProps) {
       setTimeout(() => {
         navigate("/dashboard", { replace: true });
       }, 1000);
-    } catch (error) {
-      console.log(error);
+    } catch (error:any) {
+      if (error.code === "auth/invalid-credential") {
+        toast.error("E-mail ou senha incorretos");
+      } else if (error.code === "auth/user-not-found") {
+        toast.error("Usuário não encontrado");
+      } else if (error.code === "auth/invalid-email") {
+        toast.error("E-mail inválido");
+      } else {
+        toast.error("Erro ao realizar login. Tente novamente.");
+      }
     }
   }
 
