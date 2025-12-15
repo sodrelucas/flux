@@ -3,16 +3,15 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD897peeK5N2s0cvDl0UwB-t3VkBd0oTTs",
-  authDomain: "flux-a062f.firebaseapp.com",
-  projectId: "flux-a062f",
-  storageBucket: "flux-a062f.firebasestorage.app",
-  messagingSenderId: "789259769542",
-  appId: "1:789259769542:web:d3f67f901e996d57b3a9c7",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
 
-export { auth, db };
+export const auth = getAuth(app);
+export const db = getFirestore(app);
