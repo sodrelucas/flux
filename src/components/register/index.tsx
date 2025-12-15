@@ -33,7 +33,14 @@ export default function Register({ onHandleForm }: RegisterProps) {
       toast.success("Conta criada com sucesso!");
       onHandleForm();
     } catch (error: any) {
-      console.log(error);
+    if (error.code === "auth/email-already-in-use") {
+      toast.error("Este e-mail já está cadastrado");
+    } else if (error.code === "auth/weak-password") {
+      toast.error("A senha deve ter no mínimo 6 caracteres");
+    } else if (error.code === "auth/invalid-email") {
+      toast.error("E-mail inválido");
+    } else {
+      toast.error("Erro ao criar conta. Tente novamente.");
     }
   }
 
