@@ -42,6 +42,9 @@ export default function Register({ onHandleForm }: RegisterProps) {
     } else {
       toast.error("Erro ao criar conta. Tente novamente.");
     }
+
+    console.log(error);
+  }
   }
 
   return (
