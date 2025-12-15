@@ -88,7 +88,7 @@ export function Transactions() {
                   <p>
                     {item.category}
                     <br />
-                    <span>({item.description})</span>
+                    <span>{item.description}</span>
                   </p>
                   <p
                     className={
