@@ -1,0 +1,19 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.8rem 0.5rem;
+  border: 0.1rem solid #4b5563;
+  border-radius: 0.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.8rem;
+  outline: none;
+}

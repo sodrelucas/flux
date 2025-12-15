@@ -1,0 +1,42 @@
+.newOperationBtn {
+  background: #4c93d9;
+  background: linear-gradient(
+    21deg,
+    rgba(76, 147, 217, 1) 31%,
+    rgba(125, 209, 37, 1) 65%
+  );
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background 0.4s ease;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 0;
+}
+
+.newOperationBtn:hover {
+  background: #69aff5;
+  background: linear-gradient(
+    21deg,
+    rgba(105, 175, 245, 1) 31%,
+    rgba(147, 242, 46, 1) 65%
+  );
+}
+.newOperationBtnIndex {
+  z-index: -1;
+}
+
+@media (max-width: 500px) {
+  .newOperationBtn span {
+    display: none;
+  }
+}

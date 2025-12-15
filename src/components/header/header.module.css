@@ -1,0 +1,93 @@
+.headerContainer {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  max-width: 1400px;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.headerContainer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.category {
+  font-size: 2rem;
+}
+.menu {
+  width: 300px;
+  background-color: #fff;
+  position: absolute;
+  height: 100vh;
+  padding: 0 2rem;
+}
+
+.openMenu {
+  left: 0;
+  transition: 0.4s ease-in-out;
+}
+.closeMenu {
+  left: -100%;
+
+  transition: 0.4s ease-in-out;
+}
+.menuLogo {
+  height: 44px;
+}
+
+.menuHeader {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  justify-content: space-around;
+  padding: 4rem 0 6rem;
+}
+
+.menuCategory {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #3f3f3f;
+  padding: 0.6rem 1rem;
+  margin: 1rem 0;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.selectedCategory {
+  color: #04407c;
+  background-color: #69aff570;
+}
+
+@media (max-width: 1400px) {
+  .headerContainer {
+    padding: 2rem 2rem 1rem;
+  }
+}
+
+.logout {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  padding: 0.4rem;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #fb5656;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  bottom: 2rem;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background-color: #e05f5f;
+}
